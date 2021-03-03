@@ -5,10 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    // ... next 2 lines we r fighting with Error: Universal Chunk Loading is not implemented yet at EnableChunkLoadingPlugin.apply
-    chunkLoading: false,
-    wasmLoading: false,
-    // ...
   },
   module: {
     rules: [
