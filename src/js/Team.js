@@ -16,11 +16,8 @@ export default class Team {
 
   addAll(...members) {
     members.forEach((member) => {
-      try {
-        this.add(member);
-      } catch (err) {
-        // eslint-disable-next-line no-console
-        console.error(err.message);
+      if (!this.members.has(member)) {
+        this.members.add(member);
       }
     });
   }
